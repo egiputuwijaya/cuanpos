@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.aurora {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 9999px;
+    filter: blur(120px);
+    opacity: 0.35;
+    animation: auroraMove 18s infinite alternate ease-in-out;
+}
+
+.aurora-1 {
+    background: #fb923c;
+    top: -100px;
+    left: -100px;
+}
+
+.aurora-2 {
+    background: #f97316;
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 3s;
+}
+
+.aurora-3 {
+    background: #fdba74;
+    top: 40%;
+    left: 50%;
+    animation-delay: 6s;
+}
+
+@keyframes auroraMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(100px, -80px) scale(1.2);
+    }
+    100% {
+        transform: translate(-80px, 120px) scale(1.1);
+    }
+}
